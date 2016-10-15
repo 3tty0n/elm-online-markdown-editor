@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Elm Markdown Editor</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="vendor/style/github.css">
+    </head>
+    <body>
+        <div id="main"></div>
+        <script src="vendor/highlight.pack.js"></script>
+        <script type="text/javascript" src="elm.js"></script>
+        <script type="text/javascript">
+          var node = document.getElementById('main');
+          var app = Elm.MarkdownEditor.embed(node);
+        </script>
+    </body>
+</html>
