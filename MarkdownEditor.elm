@@ -1,3 +1,5 @@
+module MarkdownEditor exposing (..)
+
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.App exposing (..)
@@ -23,9 +25,20 @@ subscriptions model =
   Sub.none
 
 
+defaultText : String
+defaultText = """# Markdown example
+
+Put *text* here.
+
+```elm
+main =
+  Html.text "Syntax highlighting!"
+```
+"""
+
 init : (Model, Cmd Msg)
 init =
-  (Model "", Cmd.none)
+  (Model defaultText, Cmd.none)
 
 
 view : Model -> Html Msg
@@ -34,7 +47,7 @@ view model =
     [ h1 [ align "center" ] [ text "Elm Markdown Editor" ]
     , div
         [ class "pane" ]
-        [ div [ class "edit", align "center"]
+        [ div [ class "edit"]
           [ textarea
             [ value model.input
             , onInput Input
@@ -43,7 +56,7 @@ view model =
             []
           ]
         ]
-      , div [ class "display", align "center" ]
+      , div [ class "display", align "left" ]
           [ Markdown.toHtml [] model.input ]
     ]
 
