@@ -44,7 +44,7 @@ init =
 view : Model -> Html Msg
 view model =
   div [ class "view" ]
-    [ h1 [ ] [ text "Elm Markdown Editor" ]
+    [ h1 [ class "display-1" ] [ text "Elm Markdown Ediror" ]
     , div [ class "pure-g panes" ]
         [ div [ class "pure-u-1-2 edit"]
           [ textarea
