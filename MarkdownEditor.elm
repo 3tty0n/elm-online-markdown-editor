@@ -44,10 +44,9 @@ init =
 view : Model -> Html Msg
 view model =
   div [ class "view" ]
-    [ h1 [ align "center" ] [ text "Elm Markdown Editor" ]
-    , div
-        [ class "pane" ]
-        [ div [ class "edit"]
+    [ h1 [ ] [ text "Elm Markdown Editor" ]
+    , div [ class "pure-g panes" ]
+        [ div [ class "pure-u-1-2 edit"]
           [ textarea
             [ value model.input
             , onInput Input
@@ -55,10 +54,10 @@ view model =
             ]
             []
           ]
+          , div [ class "pure-u-1-2 display" ]
+              [ Markdown.toHtml [] model.input ]
         ]
-      , div [ class "display", align "left" ]
-          [ Markdown.toHtml [] model.input ]
-    ]
+      ]
 
 
 main =
