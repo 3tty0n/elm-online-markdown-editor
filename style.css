@@ -7,11 +7,6 @@ h1, h2 {
   padding: 1em;
 }
 
-.panes {
-    height: 95%;
-    padding: 1em;
-}
-
 body {
     height: 95%;
 }
@@ -31,6 +26,11 @@ textarea.inputarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.panes {
+    height: 95%;
+    padding: 1em;
 }
 
 .display {
