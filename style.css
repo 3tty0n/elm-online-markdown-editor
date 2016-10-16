@@ -2,9 +2,9 @@ html, body > div, .view, .edit {
     height: 100%;
 }
 
-h1, h2 {
-  margin: 0;
-  padding: 1em;
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding-bottom: 1em;
 }
 
 body {

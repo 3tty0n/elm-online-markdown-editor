@@ -28,6 +28,14 @@ subscriptions model =
 defaultText : String
 defaultText = """# Markdown example
 
+## h2
+
+### h3
+
+#### h4
+
+##### h5
+
 Put *text* here.
 
 ```elm
@@ -43,21 +51,20 @@ init =
 
 view : Model -> Html Msg
 view model =
-  div [ class "view" ]
-    [ h1 [ class "display-1" ] [ text "Elm Markdown Ediror" ]
-    , div [ class "pure-g panes" ]
-        [ div [ class "pure-u-1-2 edit"]
-          [ textarea
-            [ value model.input
-            , onInput Input
-            , class "inputarea"
-            ]
-            []
+  div [ class "view" ] [
+    div [ class "pure-g panes" ]
+      [ div [ class "pure-u-1-2 edit"]
+        [ textarea
+          [ value model.input
+          , onInput Input
+          , class "inputarea"
           ]
-          , div [ class "pure-u-1-2 display" ]
-              [ Markdown.toHtml [] model.input ]
+          []
         ]
+        , div [ class "pure-u-1-2 display" ]
+          [ Markdown.toHtml [] model.input ]
       ]
+    ]
 
 
 main =
