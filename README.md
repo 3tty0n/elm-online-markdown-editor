@@ -13,4 +13,4 @@ This is an online markdown editor written in [Elm](http://elm-lang.org/).
 
 ## License
 
-Mit
+MIT
