@@ -1,8 +1,8 @@
 {
     "version": "1.0.0",
-    "summary": "helpful summary of your project, less than 80 characters",
-    "repository": "https://github.com/user/project.git",
-    "license": "BSD3",
+    "summary": "This is an online markdown editor written in Elm.",
+    "repository": "https://github.com/3tty0n/elm-online-markdown-editor.git",
+    "license": "MIT",
     "source-directories": [
         "."
     ],
