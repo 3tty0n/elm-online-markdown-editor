@@ -11,6 +11,13 @@ This is an online markdown editor written in [Elm](http://elm-lang.org/).
 - [Bootstrap](http://getbootstrap.com/)
 - [Pure](http://purecss.io/)
 
+## How to build
+
+```
+$ make
+$ open index.html
+```
+
 ## License
 
 MIT
