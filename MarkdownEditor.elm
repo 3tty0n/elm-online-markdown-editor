@@ -69,8 +69,8 @@ view model =
 
 main =
   program
-  { init = init
-  , update = update
-  , view = view
-  , subscriptions = subscriptions
-  }
+    { init = init
+    , update = update
+    , view = view
+    , subscriptions = subscriptions
+    }
