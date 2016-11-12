@@ -11,6 +11,10 @@ body {
     height: 95%;
 }
 
+textarea {
+    resize: none;
+}
+
 textarea.inputarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
