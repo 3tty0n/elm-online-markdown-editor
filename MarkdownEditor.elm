@@ -58,8 +58,8 @@ init =
 view : Model -> Html Msg
 view model =
   div [ class "view" ] [
-    div [ class "pure-g panes" ]
-      [ div [ class "pure-u-1-2 edit"]
+    div [ class "row panes" ]
+      [ div [ class "col-xs-6 edit"]
         [ textarea
           [ value model.input
           , onInput Input
@@ -67,7 +67,7 @@ view model =
           ]
           []
         ]
-        , div [ class "pure-u-1-2 display" ]
+        , div [ class "co-xs-6 display" ]
           [ Markdown.toHtml [] model.input ]
       ]
     ]

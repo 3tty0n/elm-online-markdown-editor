@@ -30,7 +30,7 @@ pre {
 }
 
 /* see http://purecss.io/grids/ */
-.pure-g > div {
+.row > div {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
