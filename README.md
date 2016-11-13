@@ -9,7 +9,6 @@ This is an online markdown editor written in [Elm](http://elm-lang.org/).
 ## External Library
 
 - [Bootstrap](http://getbootstrap.com/)
-- [Pure](http://purecss.io/)
 
 ## How to build
 
