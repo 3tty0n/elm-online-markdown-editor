@@ -36,11 +36,17 @@ defaultText = """# Markdown example
 
 ##### h5
 
-Put *text* here.
+This is an online markdown editor written in Elm.
+
+```scala
+def main(args: Array[String]): Unit = {
+  println("Put your texts here.")
+}
+```
 
 ```elm
 main =
-  Html.text "Syntax highlighting!"
+  Html.txt "Syntax highlighting!"
 ```
 """
 

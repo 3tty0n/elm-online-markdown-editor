@@ -25,6 +25,10 @@ textarea.inputarea {
     height: 100%;
 }
 
+pre {
+  background-color: "#E6E6FA";
+}
+
 /* see http://purecss.io/grids/ */
 .pure-g > div {
     -webkit-box-sizing: border-box;
