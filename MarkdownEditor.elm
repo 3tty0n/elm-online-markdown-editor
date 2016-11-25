@@ -50,6 +50,39 @@ main =
 ```
 """
 
+textArea =
+  style
+    [ ("height", "100%")]
+
+inputArea =
+  style
+    [ ("-webkit-box-sizing", "border-box")
+    , ("-moz-box-sizing", "border-box")
+    , ("width", "100%")
+    , ("padding-right", "3em")
+    , ("height", "100%")
+    ]
+
+row =
+  style
+    [ ("-webkit-box-sizing", "border-box")
+    , ("-moz-box-sizing", "border-box")
+    , ("box-sizing", "border-box")
+    ]
+
+panes =
+  style
+    [ ("height", "95%")
+    , ("padding", "1em")
+    ]
+
+display =
+  style
+    [ ("padding-left", "2em")
+    , ("padding-right", "2em")
+    ]
+
+
 init : (Model, Cmd Msg)
 init =
   (Model defaultText, Cmd.none)
@@ -58,18 +91,31 @@ init =
 view : Model -> Html Msg
 view model =
   div [ class "view" ] [
-    div [ class "row panes" ]
-      [ div [ class "col-xs-6 edit"]
-        [ textarea
-          [ value model.input
-          , onInput Input
-          , class "inputarea"
-          ]
-          []
-        ]
-        , div [ class "co-xs-6 display" ]
-          [ Markdown.toHtml [] model.input ]
+    div
+      [ class "row panes"
+      , panes
       ]
+        [ div
+          [ class "col-xs-6 edit"
+          , textArea
+          , row
+          ]
+            [ textarea
+              [ value model.input
+              , onInput Input
+              , class "inputarea"
+              , inputArea
+              , row
+              ]
+              []
+              ]
+          , div
+            [ class "co-xs-6 display"
+            , display
+            , row
+            ]
+            [ Markdown.toHtml [] model.input ]
+        ]
     ]
 
 

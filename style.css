@@ -1,47 +1,7 @@
+body {
+    height: 100%;
+}
+
 html, body > div, .view, .edit {
     height: 100%;
-}
-
-h1, h2, h3, h4, h5 {
-    margin: 0;
-    padding-bottom: 1em;
-}
-
-body {
-    height: 95%;
-}
-
-textarea {
-    resize: none;
-}
-
-textarea.inputarea {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
-    width: 100%;
-    padding-right: 3em;
-    height: 100%;
-}
-
-pre {
-  background-color: "#E6E6FA";
-}
-
-/* see http://purecss.io/grids/ */
-.row > div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.panes {
-    height: 95%;
-    padding: 1em;
-}
-
-.display {
-    padding-left: 2em;
-    padding-right: 2em;
 }
