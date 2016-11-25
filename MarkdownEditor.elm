@@ -37,30 +37,16 @@ defaultText = """# Markdown example
 
 This is an online markdown editor written in Elm.
 
-```scala
-def main(args: Array[String]): Unit = {
-  println("Put your texts here.")
-}
-```
-
 ```elm
 main =
   Html.txt "Syntax highlighting!"
 ```
+
+- list
+  - nest
+    - woo foo!
 """
 
-textArea =
-  style
-    [ ("height", "100%")]
-
-inputArea =
-  style
-    [ ("-webkit-box-sizing", "border-box")
-    , ("-moz-box-sizing", "border-box")
-    , ("width", "100%")
-    , ("padding-right", "3em")
-    , ("height", "100%")
-    ]
 
 row =
   style
@@ -69,11 +55,28 @@ row =
     , ("box-sizing", "border-box")
     ]
 
+
+textArea =
+  style
+    [ ("height", "100%")]
+
+
+inputArea =
+  style
+    [ ("-webkit-box-sizing", "border-box")
+    , ("-moz-box-sizing", "border-box")
+    , ("width", "100%")
+    , ("padding-right", "1em")
+    , ("height", "100%")
+    ]
+
+
 panes =
   style
     [ ("height", "95%")
     , ("padding", "1em")
     ]
+
 
 display =
   style
@@ -95,7 +98,7 @@ view model =
       , panes
       ]
         [ div
-          [ class "col-xs-6 edit"
+          [ class "col-md-6 edit"
           , textArea
           , row
           ]
@@ -106,14 +109,13 @@ view model =
               , inputArea
               , row
               ]
-              []
-              ]
-          , div
-            [ class "co-xs-6 display"
-            , display
-            , row
+            []
             ]
-            [ Markdown.toHtml [] model.input ]
+          , div
+              [ class "col-md-5 col-md-offset-1 display"
+              , display
+              , row
+              ] [ Markdown.toHtml [] model.input ]
         ]
     ]
 

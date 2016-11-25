@@ -5,3 +5,7 @@ body {
 html, body > div, .view, .edit {
     height: 100%;
 }
+
+h1, h2, h3, h4, h5 {
+    padding: 0.1em;
+}
