@@ -113,8 +113,9 @@ view model =
               ]
             []
             ]
+          , div [ class "col-xs-1" ] []
           , div
-              [ class "col-md-5 col-md-offset-1 display"
+              [ class "col-md-5 display"
               , display
               , row
               ] [ Markdown.toHtml [] model.input ]
