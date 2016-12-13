@@ -99,21 +99,21 @@ view model =
       [ class "row panes"
       , panes
       ]
-        [ div
-          [ class "col-md-6 edit"
-          , textArea
-          , row
-          ]
-            [ textarea
-              [ value model.input
-              , onInput Input
-              , class "inputarea"
-              , inputArea
-              , row
-              ]
-            []
+        [ div [ class "col-xs-1" ] []
+          , div
+            [ class "col-md-5 edit"
+            , textArea
+            , row
             ]
-          , div [ class "col-xs-1" ] []
+              [ textarea
+                [ value model.input
+                , onInput Input
+                , class "inputarea"
+                , inputArea
+                , row
+                ] []
+              ]
+          -- , div [ class "col-xs-1" ] []
           , div
               [ class "col-md-5 display"
               , display
