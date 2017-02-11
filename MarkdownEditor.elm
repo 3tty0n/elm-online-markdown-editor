@@ -113,7 +113,6 @@ view model =
                 , row
                 ] []
               ]
-          -- , div [ class "col-xs-1" ] []
           , div
               [ class "col-md-5 display"
               , display
