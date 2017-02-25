@@ -27,14 +27,6 @@ subscriptions model =
 defaultText : String
 defaultText = """# Markdown example
 
-## h2
-
-### h3
-
-#### h4
-
-##### h5
-
 This is an online markdown editor written in Elm.
 
 ```elm
@@ -44,7 +36,6 @@ main =
 
 - list
   - nest
-    - woo foo!
 """
 
 
