@@ -2,6 +2,13 @@
 
 This is an online markdown editor written in [Elm](http://elm-lang.org/).
 
+## How to build
+
+```
+$ make open
+
+```
+
 ## Demo
 
 [Elm Online Markdown Editor](https://3tty0n.github.io/elm-online-markdown-editor/).
@@ -9,13 +16,6 @@ This is an online markdown editor written in [Elm](http://elm-lang.org/).
 ## External Library
 
 - [Bootstrap](http://getbootstrap.com/)
-
-## How to build
-
-```
-$ make
-$ open index.html
-```
 
 ## License
 

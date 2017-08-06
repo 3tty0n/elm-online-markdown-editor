@@ -1,6 +1,9 @@
 build:
 	elm-make ./src/MarkdownEditor.elm --yes --output ./src/elm.js
 
+open: build
+	open index.html
+
 deploy:
 	git branch -D gh-pages
 	git checkout -b gh-pages
