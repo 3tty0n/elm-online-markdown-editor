@@ -6,7 +6,6 @@ This is an online markdown editor written in [Elm](http://elm-lang.org/).
 
 ```
 $ make open
-
 ```
 
 ## Demo
