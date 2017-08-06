@@ -90,33 +90,50 @@ init =
 
 view : Model -> Html Msg
 view model =
-  div [ class "view" ] [
-    div
-      [ class "row panes"
-      , panes
-      ]
-        [ div [ class "col-xs-1" ] []
-          , div
-            [ class "col-md-5 edit"
-            , textArea
-            , row
+    div [ class "view" ] [
+        div [ class "jumbotron" ]
+            [ div [ class "container" ]
+                  [ h1 [ class "display-3" ] [ text "Elm Markdown Editor" ]
+                  , p [ class "lead" ] [ text "This is an online markdown editor written in Elm." ]
+                  , hr [ class "my-4"] []
+                  , p [ class "lead" ]
+                        [ button [ class "btn btn-primary button-lg"
+                                 , type_ "button"
+                                 , href "https://github.com/3tty0n/elm-online-markdown-editor"
+                                 ] [ text "Source"]
+                        , button [ class "btn btn-secondary button-lg"
+                                 , href "https://github.com/3tty0n"
+                                 ] [ text "Profile" ]
+                        ]
+                  ]
             ]
-              [ textarea
-                [ value model.input
-                , onInput Input
-                , class "inputarea"
-                , inputArea
+        , div [ class "view" ] [
+            div
+                [ class "row panes"
+                , panes
+                ]
+                [ div [ class "col-xs-1" ] []
+                , div
+                [ class "col-md-5 edit"
+                , textArea
                 , row
-                ] []
-              ]
-          , div
-              [ class "col-md-5 display"
-              , display
-              , row
-              ] [ Markdown.toHtml [] model.input ]
+                ]
+                [ textarea
+                    [ value model.input
+                    , onInput Input
+                    , class "inputarea"
+                    , inputArea
+                    , row
+                    ] []
+                ]
+                , div
+                [ class "col-md-5 display"
+                , display
+                , row
+                ] [ Markdown.toHtml [] model.input ]
+                ]
         ]
     ]
-
 
 main =
   program
