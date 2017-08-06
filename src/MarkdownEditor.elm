@@ -6,22 +6,22 @@ import Html.Events exposing (..)
 import Markdown
 
 type alias Model =
-  { input : String }
+    { input : String }
 
 type Msg =
-  Input String
+    Input String
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg {input} =
-  case msg of
-    Input newStr ->
-      (Model newStr, Cmd.none)
+    case msg of
+        Input newStr ->
+            (Model newStr, Cmd.none)
 
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-  Sub.none
+    Sub.none
 
 
 defaultText : String
@@ -45,7 +45,7 @@ main =
 
 
 row =
-  style
+    style
     [ ("-webkit-box-sizing", "border-box")
     , ("-moz-box-sizing", "border-box")
     , ("box-sizing", "border-box")
@@ -55,12 +55,12 @@ row =
 
 
 textArea =
-  style
+    style
     [ ("height", "100%")]
 
 
 inputArea =
-  style
+    style
     [ ("-webkit-box-sizing", "border-box")
     , ("-moz-box-sizing", "border-box")
     , ("width", "100%")
@@ -77,7 +77,7 @@ panes =
 
 
 display =
-  style
+    style
     [ ("padding-left", "2em")
     , ("padding-right", "2em")
     ]
@@ -90,33 +90,36 @@ init =
 
 view : Model -> Html Msg
 view model =
-    div [ class "view" ] [
-        div [ class "jumbotron" ]
-            [ div [ class "container" ]
-                  [ h1 [ class "display-3" ] [ text "Elm Markdown Editor" ]
-                  , p [ class "lead" ] [ text "This is an online markdown editor written in Elm." ]
-                  , hr [ class "my-4"] []
+    div [ class "view" ]
+        [ div [ class "jumbotron" ]
+              [ div [ class "container" ]
+                  [ h1 [ class "display-3" ]
+                       [ text "Elm Markdown Editor" ]
                   , p [ class "lead" ]
-                        [ a [ class "btn btn-primary button-lg"
-                            , href "https://github.com/3tty0n/elm-online-markdown-editor"
-                            ] [ text "Source"]
-                        , a [ class "btn btn-secondary button-lg"
-                            , href "https://github.com/3tty0n"
-                            ] [ text "Profile" ]
+                      [ text "This is an online markdown editor written in Elm." ]
+                  , hr [ class "my-4"]
+                       []
+                  , p [ class "lead" ]
+                      [ a [ class "btn btn-primary button-lg"
+                          , href "https://github.com/3tty0n/elm-online-markdown-editor"
+                          ] [ text "Source"]
+                      , a [ class "btn btn-secondary button-lg"
+                          , href "https://github.com/3tty0n"
+                          ] [ text "Profile" ]
                         ]
                   ]
             ]
-        , div [ class "view" ] [
-            div
+        , div [ class "view" ]
+              [ div
                 [ class "row panes"
                 , panes
                 ]
-                [ div [ class "col-xs-1" ] []
-                , div
-                [ class "col-md-5 edit"
-                , textArea
-                , row
-                ]
+                [ div [ class "col-xs-1" ]
+                      []
+                , div [ class "col-md-5 edit"
+                      , textArea
+                      , row
+                      ]
                 [ textarea
                     [ value model.input
                     , onInput Input
@@ -126,13 +129,14 @@ view model =
                     ] []
                 ]
                 , div
-                [ class "col-md-5 display"
-                , display
-                , row
-                ] [ Markdown.toHtml [] model.input ]
+                      [ class "col-md-5 display"
+                      , display
+                      , row
+                      ] [ Markdown.toHtml [] model.input ]
                 ]
+              ]
         ]
-    ]
+
 
 main =
   program
