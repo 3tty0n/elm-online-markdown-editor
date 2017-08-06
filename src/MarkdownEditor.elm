@@ -33,9 +33,6 @@ This is an online markdown editor written in Elm.
 main =
   Html.txt "Syntax highlighting!"
 ```
-
-- list
-  - nest
 """
 
 

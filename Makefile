@@ -1,5 +1,5 @@
 build:
-	elm-make MarkdownEditor.elm --yes --output elm.js
+	elm-make ./src/MarkdownEditor.elm --yes --output ./src/elm.js
 
 deploy:
 	git branch -D gh-pages
