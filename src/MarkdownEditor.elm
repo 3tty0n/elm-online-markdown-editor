@@ -97,13 +97,12 @@ view model =
                   , p [ class "lead" ] [ text "This is an online markdown editor written in Elm." ]
                   , hr [ class "my-4"] []
                   , p [ class "lead" ]
-                        [ button [ class "btn btn-primary button-lg"
-                                 , type_ "button"
-                                 , href "https://github.com/3tty0n/elm-online-markdown-editor"
-                                 ] [ text "Source"]
-                        , button [ class "btn btn-secondary button-lg"
-                                 , href "https://github.com/3tty0n"
-                                 ] [ text "Profile" ]
+                        [ a [ class "btn btn-primary button-lg"
+                            , href "https://github.com/3tty0n/elm-online-markdown-editor"
+                            ] [ text "Source"]
+                        , a [ class "btn btn-secondary button-lg"
+                            , href "https://github.com/3tty0n"
+                            ] [ text "Profile" ]
                         ]
                   ]
             ]
