@@ -29,10 +29,18 @@ defaultText = """# Markdown example
 
 This is an online markdown editor written in Elm.
 
+Let's try!
+
 ```elm
 main =
   Html.txt "Syntax highlighting!"
 ```
+
+# Reference
+
+- [Elm](http://elm-lang.org/)
+- [Elm Markdown](https://github.com/evancz/elm-markdown)
+
 """
 
 
