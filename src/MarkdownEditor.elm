@@ -93,22 +93,22 @@ view model =
     div [ class "view" ]
         [ div [ class "jumbotron" ]
               [ div [ class "container" ]
-                  [ h1 [ class "display-3" ]
-                       [ text "Elm Markdown Editor" ]
-                  , p [ class "lead" ]
-                      [ text "This is an online markdown editor written in Elm." ]
-                  , hr [ class "my-4"]
-                       []
-                  , p [ class "lead" ]
-                      [ a [ class "btn btn-primary button-lg"
-                          , href "https://github.com/3tty0n/elm-online-markdown-editor"
-                          ] [ text "Source"]
-                      , a [ class "btn btn-secondary button-lg"
-                          , href "https://github.com/3tty0n"
-                          ] [ text "Profile" ]
+                    [ h1 [ class "display-3" ]
+                         [ text "Elm Markdown Editor" ]
+                    , p [ class "lead" ]
+                        [ text "This is an online markdown editor written in Elm." ]
+                    , hr [ class "my-4"]
+                         []
+                    , p [ class "lead" ]
+                        [ a [ class "btn btn-primary button-lg"
+                            , href "https://github.com/3tty0n/elm-online-markdown-editor"
+                            ] [ text "Source"]
+                        , a [ class "btn btn-secondary button-lg"
+                            , href "https://github.com/3tty0n"
+                            ] [ text "Profile" ]
                         ]
-                  ]
-            ]
+                    ]
+              ]
         , div [ class "view" ]
               [ div
                 [ class "row panes"
@@ -119,17 +119,14 @@ view model =
                 , div [ class "col-md-5 edit"
                       , textArea
                       , row
-                      ]
-                [ textarea
-                    [ value model.input
-                    , onInput Input
-                    , class "inputarea"
-                    , inputArea
-                    , row
-                    ] []
-                ]
-                , div
-                      [ class "col-md-5 display"
+                      ] [ textarea [ value model.input
+                                   , onInput Input
+                                   , class "inputarea"
+                                   , inputArea
+                                   , row
+                                   ] []
+                        ]
+                , div [ class "col-md-5 display"
                       , display
                       , row
                       ] [ Markdown.toHtml [] model.input ]
