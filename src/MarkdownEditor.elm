@@ -70,7 +70,7 @@ inputArea =
 
 
 panes =
-  style
+    style
     [ ("height", "95%")
     , ("padding", "1em")
     ]
@@ -138,6 +138,7 @@ view model =
         ]
 
 
+main : Program Never Model Msg
 main =
   program
     { init = init
