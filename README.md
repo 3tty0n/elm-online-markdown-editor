@@ -5,7 +5,7 @@ This is an online markdown editor written in [Elm](http://elm-lang.org/).
 ## How to build
 
 ```
-$ make open
+$ make
 ```
 
 ## Demo
